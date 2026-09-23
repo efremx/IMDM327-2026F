@@ -343,6 +343,7 @@ GameObject:
   - component: {fileID: 1435559684}
   - component: {fileID: 1435559686}
   - component: {fileID: 1435559685}
+  - component: {fileID: 1435559687}
   m_Layer: 0
   m_Name: 04_SolarSystem
   m_TagString: Untagged
@@ -372,13 +373,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1435559681}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b4616f1181f23a46bc66daa59085eba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SolarSystemStarter
   solarBodiesCSV: []
-  solarBodiesJSON: []
 --- !u!114 &1435559685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -404,8 +404,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad1f10fbb83a4471884db175d599dd27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DataJSON
-  bodies: []
-  bp: []
+  solarData:
+    bodies: []
+--- !u!114 &1435559687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435559681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 156269c71ef8e7e4fbc5306b5cd61e2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SolarSystem_2
+  solarBodiesCSV: []
 --- !u!1 &1602078845
 GameObject:
   m_ObjectHideFlags: 0
@@ -592,8 +605,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad1f10fbb83a4471884db175d599dd27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DataJSON
-  bodies: []
-  bp: []
+  solarData:
+    bodies: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
