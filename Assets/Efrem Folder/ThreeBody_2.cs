@@ -7,7 +7,7 @@ public class ThreeBody_2 : MonoBehaviour
 {
     private const float G = 500f; // Gravitational constant for this simulation, not the real-world value.
     BodyProperty[] bp;
-    private int numberOfSphere = 50;
+    private int numberOfSphere = 25;
     class BodyProperty // why struct?
     {                   // https://learn.microsoft.com/en-us/dotnet/standard/design-guidelines/choosing-between-class-and-struct
         public GameObject body;
@@ -45,7 +45,7 @@ public class ThreeBody_2 : MonoBehaviour
             bp[i].body.transform.position =
             new Vector3(x, y, 180f);
 
-            float speed = 2f;
+            float speed = 7f;
 
             // Tangential velocity around the circle
             bp[i].velocity = new Vector3(
@@ -117,10 +117,10 @@ public class ThreeBody_2 : MonoBehaviour
         for (int i = 0; i < numberOfSphere; i++)
         {
             bp[i].velocity +=
-                bp[i].acceleration * Time.deltaTime;
+                bp[i].acceleration * Time.deltaTime * 3;
 
             bp[i].body.transform.position +=
-                bp[i].velocity * Time.deltaTime;
+                bp[i].velocity * Time.deltaTime * 3;
         }
 
     }
